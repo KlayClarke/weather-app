@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <main>
+      <div id="city-head">
+        <h1 id="city-name">Welcome To My Weather App</h1>
+      </div>
+      <nav>
+        <label for="city">Insert City</label>
+        <input type="text" name="city" id="city" />
+        <input type="button" value="Fetch Weather" />
+      </nav>
+      <div id="main-container">
+        <div id="info-contain">
+          <div id="left-contain">
+            <img
+              src="https://media.giphy.com/media/sdVmH2UBMtn8Y/giphy.gif"
+              alt=""
+            />
+          </div>
+          <div id="right-contain">
+            <div id="weather-info">
+              <h1 id="current-temp"></h1>
+              <h2 id="temp-min-max"></h2>
+              <h3 id="humidity"></h3>
+              <h3 id="feels-like"></h3>
+              <h3 id="wind-chill"></h3>
+              <h3></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer></footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
