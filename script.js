@@ -1,14 +1,11 @@
 const fetchButton = document.querySelector("input[type='button']");
 const cityNameDisplay = document.querySelector("#city-name");
 const weatherGif = document.querySelector("img");
-
 const currentTemp = document.querySelector("#current-temp");
 const minMaxTemps = document.querySelector("#temp-min-max");
 const humidity = document.querySelector("#humidity");
 const feelsLike = document.querySelector("#feels-like");
 const windChill = document.querySelector("#wind-chill");
-
-console.log(currentTemp);
 
 function displayCityName(city) {
   cityNameDisplay.innerText = city;
@@ -28,19 +25,10 @@ function displayCityWeatherInfo(data) {
   humidity.innerText = `${humidity}% relative humidity`;
   feelsLike.innerText = `Feels like ${feelsLikeTemp}°`;
   windChill.innerText = windSpeed;
-
-  console.log({
-    temp,
-    humidity,
-    feelsLikeTemp,
-    minTemp,
-    maxTemp,
-    windSpeed,
-  });
 }
 
-function displayError(msg) {
-  cityNameDisplay.innerText = msg;
+function displayError(err) {
+  cityNameDisplay.innerText = err;
 }
 
 async function displayWeatherGif(weather) {
@@ -82,7 +70,3 @@ async function fetchWeather() {
 }
 
 fetchButton.addEventListener("click", fetchWeather);
-
-// if fetch completes, go to giphy api and get a gif that represents weather
-// state the weather, wind, high / low
-//
